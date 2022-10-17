@@ -1109,6 +1109,10 @@ impl SubscriptionSink {
             Some(self.uniq_sub.clone())
         }
     }
+
+    pub fn method_name(&self) -> &'static str {
+        self.method
+    }
 }
 
 impl Drop for SubscriptionSink {
