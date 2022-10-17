@@ -117,8 +117,8 @@ type Subscribers = Arc<Mutex<FxHashMap<SubscriptionKey, (MethodSink, watch::Send
 /// Represent a unique subscription entry based on [`RpcSubscriptionId`] and [`ConnectionId`].
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct SubscriptionKey {
-    conn_id: ConnectionId,
-    sub_id: RpcSubscriptionId<'static>,
+    pub conn_id: ConnectionId,
+    pub sub_id: RpcSubscriptionId<'static>,
 }
 
 /// Callback wrapper that can be either sync or async.
